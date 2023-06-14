@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header" />
-<body>
 
+<body>
 <div class="container">
     <div th:replace="fragments/bodyHeader :: bodyHeader"/>
 
@@ -11,18 +11,18 @@
             <thead>
             <tr>
                 <th>#</th>
-                <th>상품명</th>
-                <th>가격</th>
-                <th>재고수량</th>
-                <th></th>
+                <th>프로젝트 명</th>
+                <th>프로젝트 모집 기간</th>
+                <th>모집 인원 수</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="item : ${items}">
                 <td th:text="${item.id}"></td>
                 <td th:text="${item.name}"></td>
-                <td th:text="${item.price}"></td>
+                <td th:text="${item.price}">월</td>
                 <td th:text="${item.stockQuantity}"></td>
+                <td> <a href = "https://www.hanium.or.kr/portal/notice/noticeView.do">관련 사이트</a></td>
                 <td>
                     <a href="#" th:href="@{/items/{id}/edit (id=${item.id})}" class="btn btn-primary" role="button">수정</a>
                 </td>
