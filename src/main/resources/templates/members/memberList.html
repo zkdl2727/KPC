@@ -10,11 +10,10 @@
             <thead>
             <tr>
                 <th>#</th>
-                <th>취업 관련 게시글 제목</th>
-                <th>정보 분야(채용, 부트캠프, 동업 등)</th>
-                <th>추가 설명</th>
-                <th>기간</th>
-                <th>바로 가기</th>
+                <th>이름</th>
+                <th>주소</th>
+                <th>학과</th>
+                <th>학번</th>
             </tr>
             </thead>
             <tbody>
@@ -24,9 +23,6 @@
                 <td th:text="${member.address?.city}"></td>
                 <td th:text="${member.address?.street}"></td>
                 <td th:text="${member.address?.zipcode}"></td>
-                <td>
-                    <a href = "https://careerly.co.kr/bootcamp/guide/information-popular-bootcamp">바로 가기</a>
-                </td>
             </tr>
             </tbody>
         </table>
